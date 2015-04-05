@@ -1,0 +1,24 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:org.kembang.host.client.frameview">
+	<g:DockLayoutPanel unit="PX">
+		<g:north size="45">
+			<m:HeaderForm ui:field="headerForm" />
+		</g:north>
+		<g:center>
+			<g:DockLayoutPanel unit="PX">
+				<g:center>
+					<g:DockLayoutPanel unit="PX">
+						<g:west size="200">
+							<m:SidebarForm ui:field="sidebarForm" />
+						</g:west>
+						<g:center>
+							<g:DockLayoutPanel ui:field="appFormPanel" />
+						</g:center>
+					</g:DockLayoutPanel>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 

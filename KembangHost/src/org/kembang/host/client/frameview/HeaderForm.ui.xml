@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:DockLayoutPanel unit="PX">
+		<g:west size="200">
+			<g:DockLayoutPanel>
+				<g:south size="5">
+					<g:HorizontalPanel height="100%" width="100%"
+						styleName="kembang-menuMainBarSelected">
+						<g:Label></g:Label>
+					</g:HorizontalPanel>
+				</g:south>
+				<g:center>
+					<g:HTMLPanel>
+						<center>
+							<img src="images/logo.png" />
+						</center>
+					</g:HTMLPanel>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:west>
+		<g:south size="5">
+			<g:HorizontalPanel height="100%" width="100%"
+				styleName="kembang-menuMainBarSelected">
+				<g:Label></g:Label>
+			</g:HorizontalPanel>
+		</g:south>
+		<g:east size="50">
+			<g:HorizontalPanel width="100%" height="100%"
+				verticalAlignment="ALIGN_MIDDLE" horizontalAlignment="right"
+				styleName="kembang-menuMainBarLogin">
+				<g:HorizontalPanel height="100%"
+					verticalAlignment="ALIGN_MIDDLE" horizontalAlignment="right">
+					<g:PushButton ui:field="userConfig" styleName="kembang-menuUserConfig" />
+				</g:HorizontalPanel>
+			</g:HorizontalPanel>
+		</g:east>
+		<g:center>
+			<g:HorizontalPanel height="100%" width="100%"
+				styleName="kembang-menuMainBar">
+				<g:HorizontalPanel ui:field="mainMenu"
+					verticalAlignment="ALIGN_BOTTOM" height="100%">
+				</g:HorizontalPanel>
+			</g:HorizontalPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 

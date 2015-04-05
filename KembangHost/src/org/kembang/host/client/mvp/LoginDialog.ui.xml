@@ -1,0 +1,37 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel styleName="formDialogBox">
+		<table>
+			<tr>
+				<td class="formDialogBoxCaption">Masuk</td>
+			</tr>
+			<tr>
+				<td class="formLabel">Nama pengguna</td>
+			</tr>
+			<tr>
+				<td>
+					<g:TextBox ui:field="user" width="200px" styleName="formText" />
+				</td>
+			</tr>
+			<tr>
+				<td class="formLabel">Kunci</td>
+			</tr>
+			<tr>
+				<td>
+					<g:PasswordTextBox ui:field="password" width="200px"
+						styleName="formText" />
+				</td>
+			</tr>
+			<tr>
+				<td class="formLabel">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>
+					<g:Button ui:field="login" styleName="formButton">Masuk</g:Button>
+				</td>
+			</tr>
+		</table>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 
