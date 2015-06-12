@@ -7,11 +7,10 @@ import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
 import com.google.gwt.i18n.client.NumberFormat;
 import com.google.gwt.user.client.ui.DoubleBox;
-import com.google.gwt.user.client.ui.IntegerBox;
 
 public class DoubleTextBox extends DoubleBox {
 
-	NumberFormat nf= NumberFormat.getFormat("#,##0.00;(#,##0.00)");
+	NumberFormat nf = NumberFormat.getFormat("#,##0.00;(#,##0.00)");
 	Boolean dontProcess = false;
 
 	public DoubleTextBox() {
@@ -27,7 +26,7 @@ public class DoubleTextBox extends DoubleBox {
 						&& event.getNativeEvent().getKeyCode() != KeyCodes.KEY_RIGHT
 						&& event.getNativeEvent().getKeyCode() != KeyCodes.KEY_DELETE
 						&& event.getNativeEvent().getKeyCode() != KeyCodes.KEY_BACKSPACE) {
-					((IntegerBox) event.getSource()).cancelKey();
+					((DoubleBox) event.getSource()).cancelKey();
 				} else {
 					if (event.getNativeEvent().getKeyCode() == KeyCodes.KEY_LEFT
 							|| event.getNativeEvent().getKeyCode() == KeyCodes.KEY_RIGHT) {
@@ -54,6 +53,11 @@ public class DoubleTextBox extends DoubleBox {
 
 	}
 
+	@Override
+	public void setValue(Double value){
+		setText(nf.format(value));
+	}
+	
 	private int formatValue(int curPos) {
 		int result = 0;
 		String text = getText();
